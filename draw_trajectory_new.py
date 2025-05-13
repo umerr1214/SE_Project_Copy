@@ -22,10 +22,15 @@ class TrajectoryOverlayRenderer:
             data5 = json.load(f5)
 
         # ---------- New trajectory format ----------
+        # self.trajectory = [
+        #     {"x": int(point["pos_x"]), "y": int(point["pos_y"])}
+        #     for point in data4["predicted_path"]
+        # ]
         self.trajectory = [
-            {"x": int(point["pos_x"]), "y": int(point["pos_y"])}
+            {"x": int(point["x"]), "y": int(point["y"])}
             for point in data4["predicted_path"]
         ]
+
 
         # ---------- Bounce and impact points from module4new ----------
         bounce_data = data4.get("bounce_point")
