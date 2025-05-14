@@ -9,7 +9,7 @@ def main(video_path, output_json):
 
     if not cap.isOpened():
         print("Error: Cannot open video file.")
-        return
+        return 
 
     print("Instructions:")
     print("- Click on the ball in every frame where it is visible.")
